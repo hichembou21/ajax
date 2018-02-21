@@ -1,17 +1,17 @@
 webpackJsonp([0],{
 
-/***/ 7:
+/***/ 130:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scss_index_scss__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scss_index_scss__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scss_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__scss_index_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_bootstrap_scss_bootstrap_scss__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_bootstrap_scss_bootstrap_scss__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_bootstrap_scss_bootstrap_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__node_modules_bootstrap_scss_bootstrap_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__daoajax__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__daoajax__ = __webpack_require__(6);
 
 
 
@@ -58,7 +58,7 @@ function display() {
         let tr = __WEBPACK_IMPORTED_MODULE_2_jquery___default()(document.createElement('tr'));
         tr.append(`<td>${person.id}</td>`);
         tr.append(`<td>${person.name}</td>`);        
-        tr.append(`<td>${person.birthdate}</td>`);        
+        tr.append(`<td>${person.birthdate.format('DD/MM/YYYY')}</td>`);        
         tr.append(`<td>${person.gender}</td>`);        
         __WEBPACK_IMPORTED_MODULE_2_jquery___default()('.table tbody').append(tr);
     }); 
@@ -67,5 +67,5 @@ function display() {
 
 /***/ })
 
-},[7]);
+},[130]);
 //# sourceMappingURL=rest.bundle.js.map

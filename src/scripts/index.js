@@ -6,14 +6,15 @@ import { DaoAjax } from './daoajax';
 // $('p').on('click', function () {
 //     alert('hello');
 // });
-
+let person;
 $('#go').on('click', function () {
 
     let dao = new DaoAjax();
     let req = dao.getById($('#id').val());
     req.then(function (reponse) {
          // fait ça une fois la reponse est arrivé
-         $('p').text(JSON.stringify(reponse));
+         person = reponse;
+         display();
          // console.log(reponse);
      }).catch(function (error) {
          // fait ça si ya requete error   
@@ -21,15 +22,13 @@ $('#go').on('click', function () {
      });
 });
 
-// $.ajax({
-//    url : 'assets/img_and_media.txt' 
-// }).then(function (reponse) {
-//     // fait ça une fois la reponse est arrivé
-//     $('p').text(reponse);
+function display() {
+    $('.table tbody').empty();
 
-//     // console.log(reponse);
-// }).catch(function (error) {
-//     // fait ça si ya requete error   
-//     console.log('errors');    
-// });
-
+        let tr = $(document.createElement('tr'));
+        tr.append(`<td>${person.id}</td>`);
+        tr.append(`<td>${person.name}</td>`);        
+        tr.append(`<td>${person.birthdate.format('DD/MM/YYYY')}</td>`);        
+        tr.append(`<td>${person.gender}</td>`);        
+        $('.table tbody').append(tr);
+}

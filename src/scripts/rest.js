@@ -44,7 +44,7 @@ function display() {
         let tr = $(document.createElement('tr'));
         tr.append(`<td>${person.id}</td>`);
         tr.append(`<td>${person.name}</td>`);        
-        tr.append(`<td>${person.birthdate}</td>`);        
+        tr.append(`<td>${person.birthdate.format('DD/MM/YYYY')}</td>`);        
         tr.append(`<td>${person.gender}</td>`);        
         $('.table tbody').append(tr);
     }); 
